@@ -1,0 +1,50 @@
+<!-- revisar cantidad adecuada de "cols" acuerdo a results -->
+<!--cambiar example*-card por clases propias-->
+<div>
+    <p>Resultados para: <span class="label-bold">{{querySearch}}</span></p>
+</div>
+<!--
+<ul>
+<li *ngFor="let product of productos">
+    {{product.brand}}
+</li>
+
+</ul>
+-->
+
+<mat-grid-list cols="4">
+    <mat-grid-tile *ngFor="let product of productos">
+        <mat-card class="example-card">
+            <img mat-card-image src="{{product.image}}" alt="{{product.brand}}">
+            <mat-card-header>
+                <mat-card-title>{{product.brand}}</mat-card-title> 
+                <mat-card-subtitle>
+                    {{product.description}}
+                </mat-card-subtitle>
+            </mat-card-header>
+           <mat-card-content>
+                <div *ngIf="product.discount > 0; else elseBlock">
+                    <span matBadge="{{product.discount}}%" matBadgeColor="warn" matBadgeOverlap="false">
+                        <p class="newprice">{{product.newprice | currency }}</p>
+                    </span>
+                    <ng-template #elseBlock>
+                    </ng-template>
+                    <span>
+                        <p class="price">{{product.price | currency}}</p>
+                    </span>
+                </div>
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-button>Despacho</button>
+                <button mat-button>Retiro</button>
+            </mat-card-actions>
+        </mat-card>
+
+    </mat-grid-tile>
+</mat-grid-list>
+
+<mat-paginator [length]="length"
+               [pageSize]="pageSize"
+               [pageSizeOptions]="pageSizeOptions"
+               (page)="pageChangeEvent( $event ) ">
+</mat-paginator>

@@ -1,0 +1,31 @@
+.example-card {
+    max-width: 150px;
+  }
+
+.prods{
+    text-align: left;
+}
+
+.mat-card-title{
+  font-size: 14px;
+}
+
+.mat-badge-content{
+  font-size: 10px;
+}
+.mat-grid-list{
+  margin-top: 2%;
+  padding-top: 2%;
+  height: 100%;
+}
+
+.mat-form-field-appearance-legacy .mat-form-field-label{
+  top: 1.8125em;
+}
+
+.mat-form-field-infix{
+  border-top: 1.8125em;
+}
+.mat-form-field-label-wrapper{
+  top: -0.46375em;
+}

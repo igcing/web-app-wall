@@ -1,0 +1,15 @@
+.input-full-width{
+    width: 100%;
+    margin-left: 2%;
+    margin-right:2%;
+}
+.label-bold{
+    font-weight: bold;
+}
+
+.mat-toolbar-row{
+   padding-top: 40px; 
+}
+.mat-form-field-appearance-legacy .mat-form-field-label{
+    top: 35px;
+}

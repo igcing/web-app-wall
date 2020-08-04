@@ -1,5 +1,20 @@
 # WebAppWall
 
+First run
+```
+ docker build --rm -f "web-app-wall/Dockerfile" -t web-app-wall:latest web-app-wall
+```
+
+Images Docker dependencies: 
+> mongo_seed
+> mongo
+> back-app-wall
+
+When all images exists run:
+```
+docker-compose up
+```
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.5.
 
 ## Development server
